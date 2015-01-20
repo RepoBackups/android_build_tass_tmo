@@ -1,0 +1,23 @@
+0x0621, // Neopad minsh 20040510 함자가 추가되어야 함
+0x0622,
+0x0623,
+0x0624,
+0x0625,
+0x0627,
+0x062F,
+0x0630,
+0x0631,
+0x0632,
+0x0648,
+#ifdef _SHP_LANG_URDU // Neopad shmin 20050123 :
+0x0688,	/*insert urdu*/
+0x0690,	/*insert urdu*/
+0x0691,	/*insert urdu*/
+#endif
+0x0698,
+#ifdef _SHP_LANG_URDU // Neopad shmin 20050123 :
+0x06C2,
+0x06C3,
+0x06D2,
+0x06D3,
+#endif

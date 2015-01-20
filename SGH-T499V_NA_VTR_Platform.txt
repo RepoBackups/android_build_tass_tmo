@@ -1,0 +1,21 @@
+How to build
+
+
+1. Get android open source.
+    : version info - Android froyo 2.2 (android-cts-2.2_r4)
+    ( Download site : http://source.android.com )
+
+2. Get ST-S5570 EUR source and overwrite modules that you want to build.
+    : GT-S5830_S5570_EUR_OpenSource.zip 
+    ( Download site : http://opensource.samsung.com ) 
+
+3. Overwrite modules that you want to build.
+
+4. make update-api
+   make
+
+
+
+***** for Wifi build *****
+In order to compile, you should put the kernel into android root directory as 'kernel' directory.
+Make kernel first and then make Android.

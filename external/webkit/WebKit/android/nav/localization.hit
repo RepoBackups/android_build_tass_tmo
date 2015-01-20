@@ -1,0 +1,110 @@
+/*F(***************************************************************************
+ * File name : localization.hit
+ * Project :   SSTFT
+ * Module :    Localization
+ * Date :      07/04/04
+ * Version :   1.5
+ *----------------------------------------------------------------------------*
+ *----------------------------------------------------------------------------*
+ *                                    DESCRIPTION
+ *
+ * SINJISOFT
+ *
+ *----------------------------------------------------------------------------*
+ *----------------------------------------------------------------------------*
+ * 
+ *----------------------------------------------------------------------------*
+ *----------------------------------------------------------------------------*
+ *                                    EVOLUTION
+ *----------------------------------------------------------------------------*
+ * Date		| Author		| Description
+ *----------------------------------------------------------------------------*
+ * 07/21/03	| fate		| Creation (Version 1.0)
+ * 07/04/04	| fate		| Version Update, Modulation & Change module name
+ **************************************************************************)F*/
+
+
+
+#ifndef LOCALIZATION_HIT
+#define LOCALIZATION_HIT
+
+typedef enum 
+{
+	WORD_BEGIN, WORD_MIDDLE, WORD_END
+} enum_pos;
+
+
+typedef enum
+{
+	SHAPE_ISOLATED, SHAPE_INITIAL, SHAPE_MEDIAL, SHAPE_FINAL,SHAPE_SPECIAL //SISO Callisto changes to BiDi Solution Fix for 0x0649 Character Srini.siddi Oct 2010
+} enum_shape;
+
+typedef struct t_ArabicTrans
+{
+	u16	isolated;
+	u16	initial;
+	u16	medial;
+	u16	final;
+} t_ArabicTrans;
+
+typedef struct t_CharDefine
+{
+	unsigned char		isValid;
+	unsigned char		isArabic;
+	unsigned char		isNonBinding;
+} t_CharDefine;
+
+typedef struct t_LigatureTrans
+{
+	u16	code;
+	u16	isolated;
+	u16	initial;
+	u16	medial;
+	u16	final;
+} t_LigatreTrans;
+
+typedef struct {
+	u16	year;
+	u8	month;
+	u8	day;
+	u8	weekday;	
+} Date_t;
+
+
+// Fate 20050923 Remove_in_PREGIO
+#if 0
+#ifdef __ORG_WEEK__
+typedef enum
+{
+	WEEKDAY_START,
+	MON = WEEKDAY_START,
+	TUE,
+	WED,
+	THU,
+	FRI,
+	SAT,
+	SUN,
+	WEEKDAY_END = SUN,
+
+	NB_WEEKDAY
+}DAYS_T;
+#else
+typedef enum
+{
+	WEEKDAY_START,
+	SUN = WEEKDAY_START,
+	MON,
+	TUE,
+	WED,
+	THU,
+	FRI,
+	SAT,
+	WEEKDAY_END = SAT,
+
+	NB_WEEKDAY
+}DAYS_T;
+#endif
+#endif
+// Fate 20050923 Remove_in_PREGIO End
+
+#endif
